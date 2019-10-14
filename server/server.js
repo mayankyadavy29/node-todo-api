@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var {ObjectId} = require('mongodb');
 
 var {mongoose} = require('./db/mongoose');
-var {Todo} = require('./models/Todo');
+var {Todo} = require('./models/todo');
 var {User} = require('./models/user');
 
 var app = express();
@@ -47,5 +47,5 @@ app.get('/todos/:id', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Started on port 3000 ${port}`);
+    console.log(`Started on port ${port}`);
 });
